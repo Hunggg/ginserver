@@ -14,6 +14,7 @@ func (env *Env) GetConfig() {
 	viper.SetConfigFile("local.env")
 	if err := viper.ReadInConfig(); err != nil {
 		log.Fatal(err)
+		log.Fatal("Check push code Jenkins")
 	}
 	env.Host = viper.GetString("Host")
 }
